@@ -54,7 +54,7 @@ p () {
         >| $CACHEDLIST
 
     {
-        echo " "; # starting to type query sends it to fzf right away
+        # echo " "; # starting to type query sends it to fzf right away
         join -t '	' $PDFLIST $CACHEDLIST; # already cached pdfs
         # Next, apply pdftotext to pdfs that haven't been cached yet
         comm -13 \
