@@ -70,7 +70,7 @@ p () {
                 pdftotext -f 1 -l 2 "$2" - 2>/dev/null | tr "\n" "__" >| $CACHE
                 echo -e "$1	$2	$(cat $CACHE)"
             done
-} | fzf --reverse -e -d '\t'  \
+} | fzf -m --reverse -e -d '\t'  \
     --with-nth=2,3 \
     --preview-window down:80% \
     --preview '
